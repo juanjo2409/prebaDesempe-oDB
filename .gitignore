@@ -1,0 +1,9 @@
+# Ignore python helper scripts
+*.py
+
+# Ignore automation scripts
+verify_all.sh
+
+# Ignore zip archives and delivery folders
+*.zip
+delivery/

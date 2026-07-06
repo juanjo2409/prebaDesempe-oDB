@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 950" width="100%" height="100%" style="background-color: #121212; font-family: monospace, Courier, monospace;">
+  <!-- Definitions for arrows/markers -->
+  <defs>
+    <!-- Crow's foot / relationship markers (clean white lines) -->
+    <marker id="crow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 2 L 8 5 L 0 8 M 8 2 L 8 8" fill="none" stroke="#888888" stroke-width="1.2"/>
+    </marker>
+    <marker id="one" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 5 2 L 5 8 M 2 2 L 2 8" fill="none" stroke="#888888" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <!-- Title / Context -->
+  <text x="30" y="35" fill="#888888" font-size="11">Diseñaremos el siguiente esquema de base de datos relacional (3NF):</text>
+
+  <!-- ==================== TABLES ==================== -->
+
+  <!-- 1. distribution_centers (Top Center - X: 375, Y: 60) -->
+  <g transform="translate(375, 60)">
+    <rect width="250" height="90" rx="3" fill="#181818" stroke="#555555" stroke-width="1.2"/>
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#555555" stroke-width="1.2"/>
+    <text x="125" y="20" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">distribution_centers</text>
+    
+    <text x="15" y="50" fill="#888888" font-size="10">int</text>
+    <text x="75" y="50" fill="#ffffff" font-size="10" font-weight="bold">center_id</text>
+    <text x="215" y="50" fill="#888888" font-size="10">PK</text>
+    <line x1="0" y1="60" x2="250" y2="60" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="78" fill="#888888" font-size="10">varchar</text>
+    <text x="75" y="78" fill="#ffffff" font-size="10">center_name</text>
+  </g>
+
+  <!-- 2. cities (Left - X: 150, Y: 210) -->
+  <g transform="translate(150, 210)">
+    <rect width="250" height="120" rx="3" fill="#181818" stroke="#555555" stroke-width="1.2"/>
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#555555" stroke-width="1.2"/>
+    <text x="125" y="20" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">cities</text>
+    
+    <text x="15" y="50" fill="#888888" font-size="10">int</text>
+    <text x="75" y="50" fill="#ffffff" font-size="10" font-weight="bold">city_id</text>
+    <text x="215" y="50" fill="#888888" font-size="10">PK</text>
+    <line x1="0" y1="60" x2="250" y2="60" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="78" fill="#888888" font-size="10">varchar</text>
+    <text x="75" y="78" fill="#ffffff" font-size="10">city_name</text>
+    <line x1="0" y1="90" x2="250" y2="90" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="108" fill="#888888" font-size="10">int</text>
+    <text x="75" y="108" fill="#ffffff" font-size="10">center_id</text>
+    <text x="215" y="108" fill="#888888" font-size="10">FK</text>
+  </g>
+
+  <!-- 3. clients (Left - X: 150, Y: 390) -->
+  <g transform="translate(150, 390)">
+    <rect width="250" height="120" rx="3" fill="#181818" stroke="#555555" stroke-width="1.2"/>
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#555555" stroke-width="1.2"/>
+    <text x="125" y="20" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">clients</text>
+    
+    <text x="15" y="50" fill="#888888" font-size="10">int</text>
+    <text x="75" y="50" fill="#ffffff" font-size="10" font-weight="bold">client_id</text>
+    <text x="215" y="50" fill="#888888" font-size="10">PK</text>
+    <line x1="0" y1="60" x2="250" y2="60" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="78" fill="#888888" font-size="10">varchar</text>
+    <text x="75" y="78" fill="#ffffff" font-size="10">client_name</text>
+    <line x1="0" y1="90" x2="250" y2="90" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="108" fill="#888888" font-size="10">int</text>
+    <text x="75" y="108" fill="#ffffff" font-size="10">city_id</text>
+    <text x="215" y="108" fill="#888888" font-size="10">FK</text>
+  </g>
+
+  <!-- 4. orders (Left - X: 150, Y: 570) -->
+  <g transform="translate(150, 570)">
+    <rect width="250" height="120" rx="3" fill="#181818" stroke="#555555" stroke-width="1.2"/>
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#555555" stroke-width="1.2"/>
+    <text x="125" y="20" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">orders</text>
+    
+    <text x="15" y="50" fill="#888888" font-size="10">varchar</text>
+    <text x="75" y="50" fill="#ffffff" font-size="10" font-weight="bold">order_id</text>
+    <text x="215" y="50" fill="#888888" font-size="10">PK</text>
+    <line x1="0" y1="60" x2="250" y2="60" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="78" fill="#888888" font-size="10">int</text>
+    <text x="75" y="78" fill="#ffffff" font-size="10">client_id</text>
+    <text x="215" y="78" fill="#888888" font-size="10">FK</text>
+    <line x1="0" y1="90" x2="250" y2="90" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="108" fill="#888888" font-size="10">date</text>
+    <text x="75" y="108" fill="#ffffff" font-size="10">order_date</text>
+  </g>
+
+  <!-- 5. categories (Right - X: 600, Y: 390) -->
+  <g transform="translate(600, 390)">
+    <rect width="250" height="90" rx="3" fill="#181818" stroke="#555555" stroke-width="1.2"/>
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#555555" stroke-width="1.2"/>
+    <text x="125" y="20" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">categories</text>
+    
+    <text x="15" y="50" fill="#888888" font-size="10">int</text>
+    <text x="75" y="50" fill="#ffffff" font-size="10" font-weight="bold">category_id</text>
+    <text x="215" y="50" fill="#888888" font-size="10">PK</text>
+    <line x1="0" y1="60" x2="250" y2="60" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="78" fill="#888888" font-size="10">varchar</text>
+    <text x="75" y="78" fill="#ffffff" font-size="10">category_name</text>
+  </g>
+
+  <!-- 6. products (Right - X: 600, Y: 540) -->
+  <g transform="translate(600, 540)">
+    <rect width="250" height="150" rx="3" fill="#181818" stroke="#555555" stroke-width="1.2"/>
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#555555" stroke-width="1.2"/>
+    <text x="125" y="20" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">products</text>
+    
+    <text x="15" y="50" fill="#888888" font-size="10">int</text>
+    <text x="75" y="50" fill="#ffffff" font-size="10" font-weight="bold">product_id</text>
+    <text x="215" y="50" fill="#888888" font-size="10">PK</text>
+    <line x1="0" y1="60" x2="250" y2="60" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="78" fill="#888888" font-size="10">varchar</text>
+    <text x="75" y="78" fill="#ffffff" font-size="10">product_name</text>
+    <line x1="0" y1="90" x2="250" y2="90" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="108" fill="#888888" font-size="10">int</text>
+    <text x="75" y="108" fill="#ffffff" font-size="10">category_id</text>
+    <text x="215" y="108" fill="#888888" font-size="10">FK</text>
+    <line x1="0" y1="120" x2="250" y2="120" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="138" fill="#888888" font-size="10">decimal</text>
+    <text x="75" y="138" fill="#ffffff" font-size="10">unit_price</text>
+  </g>
+
+  <!-- 7. order_details (Bottom Center - X: 375, Y: 750) -->
+  <g transform="translate(375, 750)">
+    <rect width="250" height="175" rx="3" fill="#181818" stroke="#555555" stroke-width="1.2"/>
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#555555" stroke-width="1.2"/>
+    <text x="125" y="20" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">order_details</text>
+    
+    <text x="15" y="50" fill="#888888" font-size="10">int</text>
+    <text x="75" y="50" fill="#ffffff" font-size="10" font-weight="bold">detail_id</text>
+    <text x="215" y="50" fill="#888888" font-size="10">PK</text>
+    <line x1="0" y1="60" x2="250" y2="60" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="78" fill="#888888" font-size="10">varchar</text>
+    <text x="75" y="78" fill="#ffffff" font-size="10">order_id</text>
+    <text x="215" y="78" fill="#888888" font-size="10">FK</text>
+    <line x1="0" y1="90" x2="250" y2="90" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="108" fill="#888888" font-size="10">int</text>
+    <text x="75" y="108" fill="#ffffff" font-size="10">product_id</text>
+    <text x="215" y="108" fill="#888888" font-size="10">FK</text>
+    <line x1="0" y1="120" x2="250" y2="120" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="138" fill="#888888" font-size="10">int</text>
+    <text x="75" y="138" fill="#ffffff" font-size="10">quantity</text>
+    <line x1="0" y1="150" x2="250" y2="150" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="165" fill="#888888" font-size="10">decimal</text>
+    <text x="75" y="165" fill="#ffffff" font-size="10">unit_price</text>
+  </g>
+
+  <!-- 8. inventories (Bottom Right - X: 700, Y: 750) -->
+  <g transform="translate(700, 750)">
+    <rect width="220" height="120" rx="3" fill="#181818" stroke="#555555" stroke-width="1.2"/>
+    <line x1="0" y1="30" x2="220" y2="30" stroke="#555555" stroke-width="1.2"/>
+    <text x="110" y="20" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">inventories</text>
+    
+    <text x="15" y="50" fill="#888888" font-size="10">int</text>
+    <text x="65" y="50" fill="#ffffff" font-size="10" font-weight="bold">center_id</text>
+    <text x="180" y="50" fill="#888888" font-size="10">PK,FK</text>
+    <line x1="0" y1="60" x2="220" y2="60" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="78" fill="#888888" font-size="10">int</text>
+    <text x="65" y="78" fill="#ffffff" font-size="10" font-weight="bold">product_id</text>
+    <text x="180" y="78" fill="#888888" font-size="10">PK,FK</text>
+    <line x1="0" y1="90" x2="220" y2="90" stroke="#444444" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <text x="15" y="108" fill="#888888" font-size="10">int</text>
+    <text x="65" y="108" fill="#ffffff" font-size="10">stock</text>
+  </g>
+
+  <!-- ==================== RELATIONSHIP LINES ==================== -->
+
+  <!-- 1. distribution_centers (1) - - - (N) cities -->
+  <!-- Line starts from distribution_centers bottom-left to cities top-center -->
+  <path d="M 375 105 Q 275 105 275 210" fill="none" stroke="#888888" stroke-width="1.2" marker-start="url(#one)" marker-end="url(#crow)"/>
+  <text x="290" y="125" fill="#888888" font-size="9">alberga</text>
+
+  <!-- 2. cities (1) - - - (N) clients -->
+  <path d="M 275 330 L 275 390" fill="none" stroke="#888888" stroke-width="1.2" marker-start="url(#one)" marker-end="url(#crow)"/>
+  <text x="280" y="360" fill="#888888" font-size="9">contiene</text>
+
+  <!-- 3. clients (1) - - - (N) orders -->
+  <path d="M 275 510 L 275 570" fill="none" stroke="#888888" stroke-width="1.2" marker-start="url(#one)" marker-end="url(#crow)"/>
+  <text x="280" y="540" fill="#888888" font-size="9">realiza</text>
+
+  <!-- 4. orders (1) - - - (N) order_details -->
+  <!-- Line from orders bottom-center (275, 690) to order_details middle-left (375, 835) -->
+  <path d="M 275 690 Q 275 835 375 835" fill="none" stroke="#888888" stroke-width="1.2" marker-start="url(#one)" marker-end="url(#crow)"/>
+  <text x="300" y="780" fill="#888888" font-size="9">contiene</text>
+
+  <!-- 5. categories (1) - - - (N) products -->
+  <path d="M 725 480 L 725 540" fill="none" stroke="#888888" stroke-width="1.2" marker-start="url(#one)" marker-end="url(#crow)"/>
+  <text x="735" y="515" fill="#888888" font-size="9">clasifica</text>
+
+  <!-- 6. products (1) - - - (N) order_details -->
+  <!-- Line from products bottom-center (725, 690) to order_details middle-right (625, 835) -->
+  <path d="M 725 690 Q 725 835 625 835" fill="none" stroke="#888888" stroke-width="1.2" marker-start="url(#one)" marker-end="url(#crow)"/>
+  <text x="660" y="780" fill="#888888" font-size="9">se_vende_en</text>
+
+  <!-- 7. distribution_centers (1) - - - (N) inventories -->
+  <!-- Curved line from centers right edge (625, 105) down to inventories top-center (810, 750) -->
+  <path d="M 625 105 Q 810 105 810 750" fill="none" stroke="#888888" stroke-width="1.2" marker-start="url(#one)" marker-end="url(#crow)"/>
+  <text x="730" y="125" fill="#888888" font-size="9">almacena</text>
+
+  <!-- 8. products (1) - - - (N) inventories -->
+  <!-- Line from products bottom edge (725, 690) to inventories left edge (700, 810) -->
+  <path d="M 725 690 Q 725 810 700 810" fill="none" stroke="#888888" stroke-width="1.2" marker-start="url(#one)" marker-end="url(#crow)"/>
+  <text x="735" y="730" fill="#888888" font-size="9">existe_en</text>
+
+</svg>

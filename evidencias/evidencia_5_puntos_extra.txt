@@ -1,0 +1,37 @@
+REPORTE
+=== EXTRA: VISTA DE VENTAS POR CIUDAD ===
+city	total_orders	total_sales
+Barranquilla	5	302.50
+Bogotá	2	19.80
+Bucaramanga	2	89.00
+Cali	2	76.00
+Cartagena	2	96.00
+Cúcuta	2	73.60
+Manizales	2	68.40
+Medellín	2	42.00
+Pereira	2	96.60
+REPORTE
+=== EXTRA: VISTA DE VALORACIÓN DE STOCK ===
+product	total_stock	unit_price	total_value
+Gala Apple	110	2.50	275.00
+Lettuce	61	1.10	67.10
+Bananas	200	1.20	240.00
+Chicken Breast	95	6.50	617.50
+Rice 1kg	230	2.00	460.00
+REPORTE
+=== EXTRA: PROCEDIMIENTO ALMACENADO CON PARÁMETRO NULL (TODOS LOS CLIENTES) ===
+client_id	client_name	city_name
+9	SuperMax	Barranquilla
+10	Sabor Local	Barranquilla
+4	GreenBuy	Bogotá
+5	MarketOne	Bucaramanga
+6	MiniShop	Cali
+1	EcoStore	Cartagena
+7	QuickFood	Cúcuta
+2	FoodPlus	Manizales
+3	FreshMart	Medellín
+8	RetailCo	Pereira
+REPORTE
+=== EXTRA: PROCEDIMIENTO ALMACENADO CON ID = 3 (UN CLIENTE) ===
+client_id	client_name	city_name
+3	FreshMart	Medellín

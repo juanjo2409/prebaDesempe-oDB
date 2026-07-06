@@ -1,0 +1,11 @@
+INFO
+=== CANTIDAD DE REGISTROS CARGADOS POR TABLA ===
+tabla	registros
+categories	6
+cities	9
+clients	10
+distribution_centers	6
+inventories	10
+orders	21
+order_details	21
+products	10

@@ -1,0 +1,124 @@
+1. Creating database: bd_juan_maldonado_hopper
+2. Running DDL: script_ddl.sql
+3. Running DML load: script_carga.sql
+4. Running DML manipulation: script_dml.sql
+EVIDENCIA
+=== 1. PRUEBA DE INSERCIÓN: REGISTRAR NUEVO CLIENTE (Sabor Local) ===
+client_id	client_name	city_id
+10	Sabor Local	1
+order_id	client_id	order_date
+O2001	10	2026-06-01
+detail_id	order_id	product_id	quantity	unit_price
+21	O2001	1	15	2.50
+EVIDENCIA
+=== 2. PRUEBA DE ACTUALIZACIÓN: MODIFICAR CENTRO DE DISTRIBUCIÓN (Coast DC -> Caribbean Logistics Hub) ===
+center_id	center_name
+3	Caribbean Logistics Hub
+1	Center North
+2	Center West
+4	Coffee DC
+5	East Hub
+6	South Hub
+EVIDENCIA
+=== 3. PRUEBA DE INSERCIÓN PARA BORRADO: CREAR PRODUCTO TEMPORAL ===
+product_id	product_name	category_id	unit_price
+11	Temporary Test Mango	1	1.50
+5. Running business queries: consultas_sql.sql
+REPORTE
+=== CONSULTA 1: INVENTARIO DISPONIBLE POR PRODUCTO ===
+Product Name	Available Stock
+Rice 1kg	230
+Bananas	200
+Pasta	159
+Tomatoes	142
+Gala Apple	110
+Eggs x12	104
+Chicken Breast	95
+Whole Milk	72
+Lettuce	61
+Olive Oil	46
+REPORTE
+=== CONSULTA 2: HISTORIAL DE PEDIDOS POR CIUDAD ===
+City	Total Orders	Total Sales Amount
+Barranquilla	5	302.50
+Pereira	2	96.60
+Cartagena	2	96.00
+Bucaramanga	2	89.00
+Cali	2	76.00
+Cúcuta	2	73.60
+Manizales	2	68.40
+Medellín	2	42.00
+Bogotá	2	19.80
+REPORTE
+=== CONSULTA 3: TOTAL VENDIDO POR CATEGORÍA ===
+Category Name	Total Revenue
+Meats	227.50
+Dairy	172.60
+Grains	169.60
+Fruits	117.00
+Oils	89.00
+Vegetables	88.20
+REPORTE
+=== CONSULTA 4: PRODUCTOS CON MENOR INVENTARIO (< 50 UNIDADES) ===
+Product Name	Total Stock Level
+Olive Oil	46
+REPORTE
+=== CONSULTA 5: CLIENTES CON MAYOR NÚMERO DE PEDIDOS ===
+Client Name	Total Orders Placed
+SuperMax	4
+EcoStore	2
+FoodPlus	2
+FreshMart	2
+GreenBuy	2
+MarketOne	2
+MiniShop	2
+QuickFood	2
+RetailCo	2
+Sabor Local	1
+REPORTE
+=== CONSULTA 6: VALOR ECONÓMICO DEL INVENTARIO POR CENTRO ===
+Distribution Center	Inventory Financial Value
+Caribbean Logistics Hub	1077.50
+East Hub	775.10
+Coffee DC	692.40
+Center North	342.10
+South Hub	273.60
+Center West	240.00
+REPORTE
+=== EXTRA: VISTA DE VENTAS POR CIUDAD ===
+city	total_orders	total_sales
+Barranquilla	5	302.50
+Bogotá	2	19.80
+Bucaramanga	2	89.00
+Cali	2	76.00
+Cartagena	2	96.00
+Cúcuta	2	73.60
+Manizales	2	68.40
+Medellín	2	42.00
+Pereira	2	96.60
+REPORTE
+=== EXTRA: VISTA DE VALORACIÓN DE STOCK ===
+product	total_stock	unit_price	total_value
+Gala Apple	110	2.50	275.00
+Lettuce	61	1.10	67.10
+Bananas	200	1.20	240.00
+Chicken Breast	95	6.50	617.50
+Rice 1kg	230	2.00	460.00
+REPORTE
+=== EXTRA: PROCEDIMIENTO ALMACENADO CON PARÁMETRO NULL (TODOS LOS CLIENTES) ===
+client_id	client_name	city_name
+9	SuperMax	Barranquilla
+10	Sabor Local	Barranquilla
+4	GreenBuy	Bogotá
+5	MarketOne	Bucaramanga
+6	MiniShop	Cali
+1	EcoStore	Cartagena
+7	QuickFood	Cúcuta
+2	FoodPlus	Manizales
+3	FreshMart	Medellín
+8	RetailCo	Pereira
+REPORTE
+=== EXTRA: PROCEDIMIENTO ALMACENADO CON ID = 3 (UN CLIENTE) ===
+client_id	client_name	city_name
+3	FreshMart	Medellín
+SUCCESS! All MySQL scripts ran perfectly.

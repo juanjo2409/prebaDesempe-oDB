@@ -1,0 +1,17 @@
+INFO
+=== TABLAS Y VISTAS CREADAS ===
+Tables_in_bd_juan_maldonado_hopper	Table_type
+categories	BASE TABLE
+cities	BASE TABLE
+clients	BASE TABLE
+distribution_centers	BASE TABLE
+inventories	BASE TABLE
+order_details	BASE TABLE
+orders	BASE TABLE
+products	BASE TABLE
+view_product_stock_valuation	VIEW
+view_sales_summary_by_city	VIEW
+INFO
+=== PROCEDIMIENTOS ALMACENADOS CREADOS ===
+Db	Name	Type	Definer	Modified	Created	Security_type	Comment	character_set_client	collation_connection	Database Collation
+bd_juan_maldonado_hopper	sp_get_clients	PROCEDURE	root@localhost	2026-07-06 18:37:52	2026-07-06 18:37:52	DEFINER		utf8mb4	utf8mb4_0900_ai_ci	utf8mb4_unicode_ci

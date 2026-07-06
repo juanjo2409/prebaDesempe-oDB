@@ -1,0 +1,60 @@
+REPORTE
+=== CONSULTA 1: INVENTARIO DISPONIBLE POR PRODUCTO ===
+Product Name	Available Stock
+Rice 1kg	230
+Bananas	200
+Pasta	159
+Tomatoes	142
+Gala Apple	110
+Eggs x12	104
+Chicken Breast	95
+Whole Milk	72
+Lettuce	61
+Olive Oil	46
+REPORTE
+=== CONSULTA 2: HISTORIAL DE PEDIDOS POR CIUDAD ===
+City	Total Orders	Total Sales Amount
+Barranquilla	5	302.50
+Pereira	2	96.60
+Cartagena	2	96.00
+Bucaramanga	2	89.00
+Cali	2	76.00
+Cúcuta	2	73.60
+Manizales	2	68.40
+Medellín	2	42.00
+Bogotá	2	19.80
+REPORTE
+=== CONSULTA 3: TOTAL VENDIDO POR CATEGORÍA ===
+Category Name	Total Revenue
+Meats	227.50
+Dairy	172.60
+Grains	169.60
+Fruits	117.00
+Oils	89.00
+Vegetables	88.20
+REPORTE
+=== CONSULTA 4: PRODUCTOS CON MENOR INVENTARIO (< 50 UNIDADES) ===
+Product Name	Total Stock Level
+Olive Oil	46
+REPORTE
+=== CONSULTA 5: CLIENTES CON MAYOR NÚMERO DE PEDIDOS ===
+Client Name	Total Orders Placed
+SuperMax	4
+EcoStore	2
+FoodPlus	2
+FreshMart	2
+GreenBuy	2
+MarketOne	2
+MiniShop	2
+QuickFood	2
+RetailCo	2
+Sabor Local	1
+REPORTE
+=== CONSULTA 6: VALOR ECONÓMICO DEL INVENTARIO POR CENTRO ===
+Distribution Center	Inventory Financial Value
+Caribbean Logistics Hub	1077.50
+East Hub	775.10
+Coffee DC	692.40
+Center North	342.10
+South Hub	273.60
+Center West	240.00

@@ -1,0 +1,21 @@
+EVIDENCIA
+=== 1. PRUEBA DE INSERCIÓN: REGISTRAR NUEVO CLIENTE (Sabor Local) ===
+client_id	client_name	city_id
+10	Sabor Local	1
+order_id	client_id	order_date
+O2001	10	2026-06-01
+detail_id	order_id	product_id	quantity	unit_price
+21	O2001	1	15	2.50
+EVIDENCIA
+=== 2. PRUEBA DE ACTUALIZACIÓN: MODIFICAR CENTRO DE DISTRIBUCIÓN (Coast DC -> Caribbean Logistics Hub) ===
+center_id	center_name
+3	Caribbean Logistics Hub
+1	Center North
+2	Center West
+4	Coffee DC
+5	East Hub
+6	South Hub
+EVIDENCIA
+=== 3. PRUEBA DE INSERCIÓN PARA BORRADO: CREAR PRODUCTO TEMPORAL ===
+product_id	product_name	category_id	unit_price
+11	Temporary Test Mango	1	1.50
