@@ -1,6 +1,8 @@
 -- EcoMarket Riwi S.A.S. - Data Manipulation Scripts (DML - MySQL)
 -- This file contains SQL transactions for insertion, update, and deletion, validating constraints.
 
+USE bd_juan_maldonado_hopper;
+
 -- ============================================================================
 -- 1. INSERTION CASE: Register a new client with an associated order
 -- ============================================================================

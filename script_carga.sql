@@ -1,6 +1,8 @@
 -- EcoMarket Riwi S.A.S. - Data Loading Script
 -- Generated automatically from cleaned Excel data
 
+USE bd_juan_maldonado_hopper;
+
 START TRANSACTION;
 
 -- 1. Insert Distribution Centers

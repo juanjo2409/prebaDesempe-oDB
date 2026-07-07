@@ -1,5 +1,7 @@
 -- EcoMarket Riwi S.A.S. - Database Schema DDL (MySQL)
--- Database: bd_nombre_apellido_clan (Template)
+-- Database: bd_juan_maldonado_hopper
+
+USE bd_juan_maldonado_hopper;
 
 -- Disable foreign key checks to allow dropping tables in any order
 SET FOREIGN_KEY_CHECKS = 0;

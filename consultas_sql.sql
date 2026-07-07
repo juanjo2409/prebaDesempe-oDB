@@ -1,6 +1,8 @@
 -- EcoMarket Riwi S.A.S. - Analytical Business Queries
 -- These queries resolve real-world business needs of the EcoMarket management.
 
+USE bd_juan_maldonado_hopper;
+
 -- ============================================================================
 -- Consulta 1: Inventario disponible por producto
 -- Necesidad: Como jefe de abastecimiento necesito conocer las existencias actuales 
