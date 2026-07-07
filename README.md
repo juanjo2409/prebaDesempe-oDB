@@ -55,47 +55,33 @@ The physical database diagram showing entities, primary/foreign keys, and cardin
 
 ---
 
-## 7. Database Creation Instructions
+## 7. Database Creation & Execution Instructions
 
-To create the database, run the DDL schema script in your terminal using the MySQL CLI:
+To set up the database and run everything (DDL, Data Loading, DML Tests, and Business Queries), execute the single consolidated script using the MySQL CLI:
 
 ```bash
-# 1. Create the database (replace placeholder with your actual developer name)
-mysql -u root -p -e "CREATE DATABASE bd_nombre_apellido_clan CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
-
-# 2. Run the schema creation DDL
-mysql -u root -p bd_nombre_apellido_clan < script_ddl.sql
+# Execute the complete project SQL file
+mysql -u root -p < ecomarket_completo.sql
 ```
+
+Alternatively, open **`ecomarket_completo.sql`** in **MySQL Workbench** and click the lightning bolt icon to execute the entire script.
 
 ---
 
-## 8. Data Loading Instructions
-
-Data loading can be performed using either the automatic SQL transaction script or the exported CSV files located in the `exports/` folder.
-
-### Option A: Using the SQL Transaction Script (Recommended)
-This script runs inside a single database transaction, inserting all homologated and cleaned master catalogs and transactional history:
-
-```bash
-mysql -u root -p bd_nombre_apellido_clan < script_carga.sql
-```
-
-### Option B: Importing via CSV Files
-If using an Import Wizard (like MySQL Workbench or DBeaver), import the CSV files in `exports/` in the following strict order to respect foreign key constraints:
-1. `distribution_centers.csv`
-2. `cities.csv`
-3. `clients.csv`
-4. `categories.csv`
-5. `products.csv`
-6. `inventories.csv`
-7. `orders.csv`
-8. `order_details.csv`
+## 8. Database Structure and Normalization
+This database implements a professional, 3rd Normal Form (3NF) relational database model in MySQL.
+The consolidated script `ecomarket_completo.sql` is structured into 5 sequential sections:
+1. **0. CREACIÓN Y SELECCIÓN DE LA BASE DE DATOS**: Automatically creates the database `bd_juan_maldonado_hopper` and selects it.
+2. **1. ESTRUCTURA DDL**: Creates all 8 tables, relationships, constraints, views, and the stored procedure.
+3. **2. CARGA DE DATOS**: Loads the cleaned master catalogs and transaction history inside a single transaction.
+4. **3. PRUEBAS DML**: Verifies insertion, update, and deletion constraints.
+5. **4. CONSULTAS DE NEGOCIO**: Runs the 6 analytical queries and tests the views and stored procedure.
 
 ---
 
 ## 9. SQL Query Explanation
 
-Six analytical SQL queries have been written in `consultas_sql.sql` to resolve key business questions:
+The 6 analytical SQL queries included in Section 4 of `ecomarket_completo.sql` solve key business questions:
 
 1. **Available Stock by Product**: Sums up product quantities across all centers to help the procurement manager plan purchases.
 2. **Order Volume and Revenue by City**: Details which cities generate the highest sales volume for market expansion analysis.
