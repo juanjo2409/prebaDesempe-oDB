@@ -107,7 +107,8 @@ Six analytical SQL queries have been written in `consultas_sql.sql` to resolve k
 ---
 
 ## 10. Developer Information
-* **Developer Name**: [Insert Name]
-* **Developer Surname**: [Insert Surname]
-* **Clan**: [Insert Clan Name]
+* **Developer Name**: Juan
+* **Developer Surname**: Maldonado
+* **Clan**: Hopper
 * **Course**: Data Analytics & Databases - Riwi
+* **GitHub Repository**: [juanjo2409/prebaDesempe-oDB](https://github.com/juanjo2409/prebaDesempe-oDB)
